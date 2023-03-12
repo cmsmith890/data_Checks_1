@@ -1,0 +1,49 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMULV6aCE3fYaE47kH9ZjO9",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/cmsmith890/data_Checks_1/blob/main/kc_2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "1-kC8g_gs900"
+      },
+      "outputs": [],
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import pandas as pd\n",
+        "\n",
+        "data = pd.read_csv(r'c://users/cmsmi/Desktop/kar-housing-data.csv')\n",
+        "df = pd.DataFrame(data, columns=['city', 'price'])\n",
+        "print(df)\n",
+        "\n",
+        "fig, ax = plt.subplots(figsize=(500000, 100000))\n",
+        "ax.scatter(x = df['City'], y = df['SalePrice'])\n",
+        "plt.xlabel(\"Days on Market\")\n",
+        "plt.ylabel(\"House Price\")\n",
+        "\n",
+        "plt.show()"
